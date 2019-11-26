@@ -1,5 +1,8 @@
 package myMath;
 import java.util.Comparator;
+import java.util.Iterator;
+
+import myMath.LinkedList.Node;
 /**
  * This class represents a simple "Monom" of shape a*x^b, where a is a real number and a is an integer (summed a none negative), 
  * see: https://en.wikipedia.org/wiki/Monomial 
@@ -130,6 +133,13 @@ public class Monom implements function{
 		return false;
 
 	}
+
+	public boolean equals(Monom p1) {
+		if(this.get_coefficient() == p1.get_coefficient() && this.get_power() == p1.get_power())
+			return true;
+		return false;
+
+	}
 	//****************** Private Methods and Data *****************
 
 
@@ -140,6 +150,7 @@ public class Monom implements function{
 		if(p<0) {throw new RuntimeException("ERR the power of Monom should not be negative, got: "+p);}
 		this._power = p;
 	}
+
 	private static Monom getNewZeroMonom() {return new Monom(ZERO);}
 	private double _coefficient; 
 	private int _power;
