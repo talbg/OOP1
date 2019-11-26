@@ -8,7 +8,6 @@ import myMath.LinkedList.Node;
  * see: https://en.wikipedia.org/wiki/Monomial 
  * The class implements function and support simple operations as: construction, value at x, derivative, add and multiply. 
  * @author Boaz
- *
  */
 public class Monom implements function{
 	public static final Monom ZERO = new Monom(0,0);
